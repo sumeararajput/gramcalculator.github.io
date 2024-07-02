@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   
+
+  const pricePerGram = 700 / 1000; // 700 rupees per kg, so price per gram
+const input = prompt('1kg chicken is 700 rupees. How much do you want? (e.g., "1kg", "750gram")');
+
+let quantity;
+if (input.endsWith('kg')) {
+  quantity = parseFloat(input) * 1000; // Convert kg to grams
+} else if (input.endsWith('gram')) {
+  quantity = parseFloat(input);
+}
+
+if (!isNaN(quantity)) {
+  const cost = quantity * pricePerGram;
+  document.write(`${quantity} grams is ${cost.toFixed(2)} rupees`);
+} else {
+  document.write('Invalid input');
+}
+      
+ 
+    </script>
+       
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+</body>
+</html>
